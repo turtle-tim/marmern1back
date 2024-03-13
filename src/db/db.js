@@ -9,7 +9,6 @@ const temp=async()=>{
     useCreateIndex: true,
     useFindAndModify: true,
     useUnifiedTopology: true,
-  }.then(logger.info("Connected to db")).catch(err){console.log(err)}
-  )
+  }.then(logger.info("Connected to db")).catch((err)=>{logger.error("Error at db",err)})
 }
 module.exports=temp
