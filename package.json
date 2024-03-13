@@ -1,0 +1,35 @@
+{
+  "name": "fnfao-backend-application",
+  "version": "2.0.0",
+  "description": "This API feeds FNFAO front-end application.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "env-cmd --file ./config/dev.env nodemon ./index.js -e js",
+    "prod": "env-cmd --file ./config/prod.env node index.js",
+    "start": "env-cmd --file ./config/dev.env node index.js"
+  },
+  "author": "FNFAO Admin",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.354.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "generate-password": "^1.4.2",
+    "helmet": "^3.21.1",
+    "jsonwebtoken": "^8.1.1",
+    "lodash": "^4.17.15",
+    "mongoose": "^5.13.17",
+    "multer": "^1.4.2",
+    "multer-s3": "^3.0.1",
+    "winston": "^3.9.0"
+  },
+  "devDependencies": {
+    "env-cmd": "^10.0.1",
+    "nodemon": "^1.19.4"
+  }
+}
