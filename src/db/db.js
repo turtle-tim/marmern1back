@@ -2,13 +2,16 @@ const mongoose = require("mongoose");
 
 const { logger } = require("../utils/logger/loggerUtils");
 
-const temp=async()=>{
-  mongoose. connect(
-    await process.env.MONGODB_URI, {
+mongoose
+  .connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useCreateIndex: true,
     useFindAndModify: true,
     useUnifiedTopology: true,
-  }.then(logger.info("Connected to db")).catch((err)=>{logger.error("Error at db",err)})
-}
-module.exports=temp
+  })
+  .then(() => {
+    logger.info("Connected to database");
+  })
+  .catch((error) => {
+    logger.error("Failed to connect to database!!!", error);
+  });
