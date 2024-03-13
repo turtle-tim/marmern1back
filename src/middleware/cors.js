@@ -1,7 +1,5 @@
 const ALLOWED_ORIGINS = [
-  "http://localhost:4200",
-  "https://fnfaodatabase.firstnationsfamilyadvocate.com",
-  "https://staging-db.firstnationsfamilyadvocate.com",
+  "https://marmern1back.onrender.com"
 ];
 
 const cors = async (req, res, next) => {
